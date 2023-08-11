@@ -6,7 +6,7 @@ part of 'welcome_notifier.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$indexDotHash() => r'e407c19e35a91274d4ef23f17c8ec0cedde72385';
+String _$indexDotHash() => r'34683c79422155c41d3dd205912b77e8bbf3d7d6';
 
 /// See also [IndexDot].
 @ProviderFor(IndexDot)

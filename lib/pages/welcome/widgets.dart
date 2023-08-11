@@ -4,6 +4,7 @@ import '../../common/widgets/app_shadow.dart';
 import '../../common/widgets/text_widgets.dart';
 
 Widget appOnbordingPage(
+  BuildContext context,
   PageController controller, {
   String imagPath = "assets/images/reading.png",
   String title = "",
@@ -27,6 +28,7 @@ Widget appOnbordingPage(
       _nextButton(
         index,
         controller,
+        context,
       ),
     ],
   );
@@ -35,6 +37,7 @@ Widget appOnbordingPage(
 Widget _nextButton(
   int index,
   PageController controller,
+  BuildContext context,
 ) {
   return GestureDetector(
     onTap: () {
@@ -44,6 +47,11 @@ Widget _nextButton(
           duration: const Duration(milliseconds: 300),
           curve: Curves.linear,
         );
+      } else {
+        // 跳转到注册页
+        /* Navigator.push(
+            context, MaterialPageRoute(builder: (context) => const SiginIn())); */
+        Navigator.pushNamed(context, '/signIn');
       }
     },
     child: Container(
@@ -53,7 +61,7 @@ Widget _nextButton(
       decoration: appBoxShadow(),
       child: Center(
         child: text16Normal(
-          text: 'next',
+          text: index == 3 ? "Get stared" : 'next',
           color: Colors.white,
         ),
       ),

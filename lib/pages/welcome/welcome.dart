@@ -13,7 +13,7 @@ class WelCome extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final index = ref.watch(indexDotProvider);
     return Container(
-      color: Colors.black,
+      color: Colors.white,
       child: SafeArea(
         child: Scaffold(
           body: Container(
@@ -32,6 +32,7 @@ class WelCome extends ConsumerWidget {
                   children: [
                     // First Page
                     appOnbordingPage(
+                      context,
                       _controller,
                       imagPath: 'assets/images/reading.png',
                       title: 'First see Learning',
@@ -41,6 +42,7 @@ class WelCome extends ConsumerWidget {
                     ),
                     // Second Page
                     appOnbordingPage(
+                      context,
                       _controller,
                       imagPath: 'assets/images/man.png',
                       title: 'Connect With Everyone',
@@ -50,6 +52,7 @@ class WelCome extends ConsumerWidget {
                     ),
                     // Third Page
                     appOnbordingPage(
+                      context,
                       _controller,
                       imagPath: 'assets/images/boy.png',
                       title: 'Always Fascinated Learning',
